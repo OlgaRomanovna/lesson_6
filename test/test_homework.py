@@ -52,12 +52,12 @@ def test_find_suitable_user():
     ]
 
     # TODO найдите пользователя с именем "Olga"
-    suitable_users = {}
+    suitable_users = []
     for name in users:
-        if name == {"name": "Olga", "age": 45}:
-            suitable_users = {"name": "Olga", "age": 45}
+        if name['name'] == "Olga":
+            suitable_users.append(name)
 
-    assert suitable_users == {"name": "Olga", "age": 45}
+    assert suitable_users[0] == {"name": "Olga", "age": 45}
 
     # TODO найдите всех пользователей младше 20 лет
     suitable_users = []
